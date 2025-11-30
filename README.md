@@ -5,12 +5,13 @@ This repository collects and preprocesses Google Play Store reviews for Ethiopia
 - **Task-1:** Scraping, cleaning, and translating reviews
 - **Task-2:** Sentiment analysis and thematic extraction
 
-##  Task-1 Deliverables
+## Task-1 Deliverables
 
 ### ✔ 1. Raw Scraped Reviews
+
 Generated file:
 
-```
+```text
 data/reviews_raw.csv
 ```
 
@@ -23,11 +24,11 @@ Contains:
 - thumbs_up (helpfulness)
 - app_version
 
-
 ### ✔ 2. Scraper Script
+
 File:
 
-```
+```text
 scrape/scrape_reviews.py
 ```
 
@@ -39,9 +40,10 @@ python scrape/scrape_reviews.py
 ```
 
 ### ✔ 3. Preprocessing Script (with Translation)
+
 File:
 
-```
+```text
 scripts/preprocess.py
 ```
 
@@ -55,7 +57,7 @@ Operations include:
 - Translate non-English reviews to English using Google Translate
 - Save cleaned dataset to:
 
-```
+```text
 data/reviews_clean_translated.csv
 ```
 
@@ -66,9 +68,10 @@ python scripts/preprocess.py
 ```
 
 ### ✔ 4. Cleaned & Translated Dataset
+
 Generated file:
 
-```
+```text
 data/reviews_clean_translated.csv
 ```
 
@@ -77,9 +80,10 @@ This dataset is ready for sentiment analysis (Task-2).
 ## Task-2 Deliverables
 
 ### ✔ 1. Sentiment Analysis & Labeling
+
 File:
 
-```
+```text
 scripts/analyze_sentiment.py
 ```
 
@@ -98,9 +102,10 @@ scripts/analyze_sentiment.py
 - Reviews can be assigned multiple themes or “Other” if no keywords match
 
 ### ✔ 3. Sentiment & Theme Dataset
+
 Generated file:
 
-```
+```text
 data/reviews_sentiment_themes.csv
 ```
 
@@ -123,7 +128,7 @@ python scripts/analyze_sentiment.py
 
 ## Folder Structure
 
-```
+```text
 bank-reviews/
 ├── scrape/
 │   └── scrape_reviews.py
@@ -139,6 +144,7 @@ bank-reviews/
 ```
 
 ## How to Set Up
+
 Install dependencies:
 
 ```bash
@@ -152,6 +158,7 @@ Then run:
 3. Sentiment & theme analysis → generates reviews_sentiment_themes.csv
 
 ## Apps Covered
+
 - Bank App ID: CBE - com.combanketh.mobilebanking
 - Bank of Abyssinia: com.boa.boaMobileBanking
 - Dashen Bank: com.dashen.dashensuperapp
