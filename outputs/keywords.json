@@ -1,0 +1,191 @@
+{
+    "keywords_by_bank": {
+        "CBE": [
+            {
+                "keyword": "good",
+                "score": 0.0633295725015469
+            },
+            {
+                "keyword": "app",
+                "score": 0.05539376224280254
+            },
+            {
+                "keyword": "best",
+                "score": 0.035357139622370866
+            },
+            {
+                "keyword": "nice",
+                "score": 0.022358154448056115
+            },
+            {
+                "keyword": "cbe",
+                "score": 0.020262159636832457
+            },
+            {
+                "keyword": "good app",
+                "score": 0.016665175406423236
+            },
+            {
+                "keyword": "bank",
+                "score": 0.01659508694897122
+            },
+            {
+                "keyword": "like",
+                "score": 0.015759395895614117
+            },
+            {
+                "keyword": "excellent",
+                "score": 0.012273893787139736
+            },
+            {
+                "keyword": "application",
+                "score": 0.011989032848374891
+            },
+            {
+                "keyword": "best app",
+                "score": 0.01073088538177468
+            },
+            {
+                "keyword": "nice app",
+                "score": 0.010303227048881963
+            },
+            {
+                "keyword": "love",
+                "score": 0.009730300131235279
+            },
+            {
+                "keyword": "happy",
+                "score": 0.008977784237415446
+            },
+            {
+                "keyword": "apps",
+                "score": 0.008643603200207043
+            }
+        ],
+        "Bank of Abyssinia": [
+            {
+                "keyword": "app",
+                "score": 0.0566573510199688
+            },
+            {
+                "keyword": "good",
+                "score": 0.04583397771234194
+            },
+            {
+                "keyword": "best",
+                "score": 0.02728381816968937
+            },
+            {
+                "keyword": "boa",
+                "score": 0.018948154170230453
+            },
+            {
+                "keyword": "working",
+                "score": 0.01893474685756903
+            },
+            {
+                "keyword": "bank",
+                "score": 0.01785882303607212
+            },
+            {
+                "keyword": "great",
+                "score": 0.016622203401552373
+            },
+            {
+                "keyword": "work",
+                "score": 0.016401206520905178
+            },
+            {
+                "keyword": "nice",
+                "score": 0.01547818289224566
+            },
+            {
+                "keyword": "like",
+                "score": 0.015307555354143685
+            },
+            {
+                "keyword": "doesn",
+                "score": 0.014852213194066386
+            },
+            {
+                "keyword": "worst",
+                "score": 0.014607208786836691
+            },
+            {
+                "keyword": "use",
+                "score": 0.014282129726207597
+            },
+            {
+                "keyword": "bad",
+                "score": 0.013169615322167682
+            },
+            {
+                "keyword": "banking",
+                "score": 0.012999076782752443
+            }
+        ],
+        "Dashen Bank": [
+            {
+                "keyword": "app",
+                "score": 0.0639424817726434
+            },
+            {
+                "keyword": "best",
+                "score": 0.03632019047321206
+            },
+            {
+                "keyword": "good",
+                "score": 0.035132578055346524
+            },
+            {
+                "keyword": "bank",
+                "score": 0.0262876291669054
+            },
+            {
+                "keyword": "super",
+                "score": 0.024392218231142154
+            },
+            {
+                "keyword": "dashen",
+                "score": 0.023936484835427273
+            },
+            {
+                "keyword": "nice",
+                "score": 0.02103750147525022
+            },
+            {
+                "keyword": "fast",
+                "score": 0.020994267873513318
+            },
+            {
+                "keyword": "amazing",
+                "score": 0.019318187884942835
+            },
+            {
+                "keyword": "banking",
+                "score": 0.017934697424139938
+            },
+            {
+                "keyword": "easy",
+                "score": 0.0175537060696269
+            },
+            {
+                "keyword": "super app",
+                "score": 0.015980156203422274
+            },
+            {
+                "keyword": "dashen bank",
+                "score": 0.015510905761685229
+            },
+            {
+                "keyword": "use",
+                "score": 0.01496928267854432
+            },
+            {
+                "keyword": "great",
+                "score": 0.014384552643726047
+            }
+        ]
+    },
+    "keywords_by_sentiment": {}
+}
