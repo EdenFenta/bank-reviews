@@ -1,0 +1,125 @@
+[
+  {
+    "bank": "CBE",
+    "total_reviews": 403,
+    "negative_reviews": 41,
+    "top_negative_themes": [
+      [
+        "Other",
+        32
+      ],
+      [
+        "Customer Support",
+        4
+      ],
+      [
+        "Transaction Performance",
+        3
+      ]
+    ],
+    "sample_negative_reviews": [
+      {
+        "review_text": "this app very bad 👎",
+        "rating": 1
+      },
+      {
+        "review_text": "it suddenly asked me to enter the verification key I received. and it (*get your verification key from the nearest CBE Branch*) Now I'm in Australia, what do you expect me to do???! There is no nearest or furthermost cbe Branch!! SO FRUSTRATING! How can I manage my bank account now????",
+        "rating": 1
+      },
+      {
+        "review_text": "Don't be ashamed, but when you cut 11.50 birr for 15 birr, let us fix it",
+        "rating": 1
+      },
+      {
+        "review_text": "mid application it's so annoying",
+        "rating": 3
+      },
+      {
+        "review_text": "Seriously, what’s going on with this app? The \"Pay to Beneficiary\" option is completely disabled for Android users, yet iOS users get full access without restrictions. Why are Android users being treated like second class customers? It’s the same app, the same service, but clearly not the same experience. This kind of platform bias is unacceptable, either give everyone the same features or be transparent about why you’re limiting functionality. Right now, it just feels unfair and frustrating.",
+        "rating": 1
+      }
+    ]
+  },
+  {
+    "bank": "Bank of Abyssinia",
+    "total_reviews": 430,
+    "negative_reviews": 103,
+    "top_negative_themes": [
+      [
+        "Other",
+        77
+      ],
+      [
+        "Transaction Performance",
+        11
+      ],
+      [
+        "Account Access",
+        8
+      ]
+    ],
+    "sample_negative_reviews": [
+      {
+        "review_text": "bad exprience...it is so crushed",
+        "rating": 1
+      },
+      {
+        "review_text": "not user friendly at all it requires a huge connectivity and also lags many times 😑😑😑",
+        "rating": 1
+      },
+      {
+        "review_text": "It keeps notifying me to disable developer options and quiet while I'm not enabled. always bring another type of problem with new updates.",
+        "rating": 1
+      },
+      {
+        "review_text": "the lag is unbelievable when you need it the most this suks",
+        "rating": 1
+      },
+      {
+        "review_text": "I cant belive I could find the worst bank app ever .yet very simple to fix the problem and the company just ignored it. no body can do business with this kind of app.",
+        "rating": 1
+      }
+    ]
+  },
+  {
+    "bank": "Dashen Bank",
+    "total_reviews": 432,
+    "negative_reviews": 52,
+    "top_negative_themes": [
+      [
+        "Other",
+        37
+      ],
+      [
+        "Transaction Performance",
+        10
+      ],
+      [
+        "Feature Requests",
+        2
+      ]
+    ],
+    "sample_negative_reviews": [
+      {
+        "review_text": "bill payment options are limited in this app please add ethio telecom bill electric bill etc.. instead of adding nonsense in banking app",
+        "rating": 1
+      },
+      {
+        "review_text": "it's a really slow app, I'm not sure what the issue is. Even other bank transfers are not working",
+        "rating": 2
+      },
+      {
+        "review_text": "always updating bad stability",
+        "rating": 1
+      },
+      {
+        "review_text": "system failure transfer to others account",
+        "rating": 2
+      },
+      {
+        "review_text": "This so-called “Super App” is a complete disappointment. It’s confusing, slow, and full of glitches honestly, it feels like it was designed to test people’s patience, not to help them bank. Calling it “super” is a joke; it’s one of the most useless apps I’ve ever used.",
+        "rating": 1
+      }
+    ]
+  }
+]
