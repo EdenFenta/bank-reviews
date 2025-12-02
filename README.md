@@ -1,164 +1,226 @@
 # Bank App Reviews
 
-This repository collects and preprocesses Google Play Store reviews for Ethiopian banking mobile applications.
+This repository collects, preprocesses, analyzes, and visualizes Google Play Store reviews for Ethiopian banking mobile applications.  
+It includes review scraping, cleaning, translation, sentiment labeling, thematic extraction, KPI generation, visualization, and insights reporting.
 
-- **Task-1:** Scraping, cleaning, and translating reviews
-- **Task-2:** Sentiment analysis and thematic extraction
+## Task Overview
 
-## Task-1 Deliverables
+- **Task-1:** Scraping, cleaning, translating reviews
+- **Task-2:** Sentiment analysis & thematic extraction
+- **Task-3:** KPI aggregation, data visualization, and per-bank issue detection
+- **Task-4:** Insights generation, findings documentation, and reporting
 
-### ✔ 1. Raw Scraped Reviews
+## Task-1 Deliverables (✔ Completed)
 
-Generated file:
+1. **Raw Scraped Reviews**  
+   Generated file:  
+   ```
+   data/reviews_raw.csv
+   ```  
+   Contains:  
+   - bank  
+   - review_text  
+   - rating  
+   - review_date  
+   - thumbs_up  
+   - app_version  
 
-```text
-data/reviews_raw.csv
-```
+2. **Scraper Script**  
+   ```
+   scrape/scrape_reviews.py
+   ```  
+   Run:  
+   ```bash
+   python scrape/scrape_reviews.py
+   ```
 
-Contains:
+3. **Preprocessing + Translation**  
+   ```
+   scripts/preprocess.py
+   ```  
+   Operations:  
+   - Drop duplicates  
+   - Remove missing values  
+   - Normalize dates  
+   - Clean text  
+   - Translate non-English reviews → English  
+   - Output:  
+     ```
+     data/reviews_clean_translated.csv
+     ```  
+   Run:  
+   ```bash
+   python scripts/preprocess.py
+   ```
 
-- bank
-- review_text
-- rating
-- review_date
-- thumbs_up (helpfulness)
-- app_version
+4. **Output (Clean + Translated Dataset)**  
+   ```
+   data/reviews_clean_translated.csv
+   ```  
+   This is the input for Task-2.
 
-### ✔ 2. Scraper Script
+## Task-2 Deliverables (✔ Completed)
 
-File:
+1. **Sentiment Analysis**  
+   Script:  
+   ```
+   scripts/analyze_sentiment.py
+   ```  
+   - Computes VADER sentiment score  
+   - Labels each review as positive, neutral, or negative  
 
-```text
-scrape/scrape_reviews.py
-```
+2. **Thematic Classification**  
+   Themes include:  
+   - Transaction Performance  
+   - Customer Support  
+   - Account Access  
+   - User Interface / UX  
+   - Feature Requests  
+   - Other  
 
-- Uses **google-play-scraper** to fetch ~500 reviews per bank app.
-- Run it:
+3. **Output Dataset**  
+   ```
+   data/reviews_sentiment_themes.csv
+   ```  
+   Contains:  
+   - review_text  
+   - bank  
+   - rating  
+   - sentiment_label  
+   - sentiment_score  
+   - theme  
+   Run:  
+   ```bash
+   python scripts/analyze_sentiment.py
+   ```
 
-```bash
-python scrape/scrape_reviews.py
-```
+## Task-3 Deliverables: KPIs & Visualizations (✔ Completed)
 
-### ✔ 3. Preprocessing Script (with Translation)
+1. **KPI Aggregation**  
+   Script:  
+   ```
+   scripts/insights_and_viz.py
+   ```  
+   Generates KPIs such as:  
+   - Total reviews per bank  
+   - Average rating per bank  
+   - Positive / negative sentiment percentages  
+   - Theme distribution  
+   - Top recurring issues  
+   Saved to:  
+   ```
+   outputs/kpi_summary.csv
+   ```
 
-File:
+2. **Visualizations**  
+   Automatically generated:  
 
-```text
-scripts/preprocess.py
-```
+   | Visualization             | Output File                  |
+   |---------------------------|------------------------------|
+   | Sentiment by Bank         | outputs/sentiment_by_bank.png |
+   | Rating Distribution       | outputs/rating_by_bank.png   |
+   | Top Themes                | outputs/top_themes.png       |
+   | Sentiment by Theme (stacked bar) | outputs/sentiment_by_theme.png |
 
-Cleans and normalizes the scraped data, translates non-English reviews to English.
-Operations include:
+3. **Per-Bank Issue Detection**  
+   The script also analyzes:  
+   - Most common negative themes per bank  
+   - First samples of negative reviews  
+   - Pain points grouped by category  
+   Saved to:  
+   ```
+   outputs/bank_issues.json
+   ```  
+   Run Task-3:  
+   ```bash
+   python scripts/insights_and_viz.py
+   ```
 
-- Drop duplicate reviews (bank + review_text)
-- Drop rows with missing rating or text
-- Normalize dates → YYYY-MM-DD
-- Remove control characters and trim whitespace
-- Translate non-English reviews to English using Google Translate
-- Save cleaned dataset to:
+## Task-4 Deliverables: Insights & Reporting (✔ Completed)
 
-```text
-data/reviews_clean_translated.csv
-```
+Task-4 focuses on turning the data into actionable insights and preparing a business-ready report.
 
-Run it:
+1. **Insights for Each Bank**  
+   Includes:  
+   - What users complain about most  
+   - What drives negative sentiment  
+   - Which features users request  
+   - Operational issues (e.g., login failures, transfer errors)  
+   - UX issues (e.g., slow performance, poor navigation)  
+   - Support-related frustrations  
+   - Version-specific issues  
 
-```bash
-python scripts/preprocess.py
-```
+2. **Comparative Analysis Across Banks**  
+   Findings include:  
+   - Which bank has higher positive sentiment  
+   - Which bank has more consistent user ratings  
+   - Banks with recurring payment/transfer failures  
+   - Banks with OTP/login concerns  
+   - Banks with UI/UX complaints  
 
-### ✔ 4. Cleaned & Translated Dataset
+3. **Business Recommendations**  
+   Outputs include insights such as:  
+   - Improve OTP reliability  
+   - Optimize transaction speed  
+   - Redesign UI elements  
+   - Better error messaging  
+   - Strengthen customer support turnaround  
+   - Add biometric login or dark mode  
+   - Improve onboarding flow  
 
-Generated file:
-
-```text
-data/reviews_clean_translated.csv
-```
-
-This dataset is ready for sentiment analysis (Task-2).
-
-## Task-2 Deliverables
-
-### ✔ 1. Sentiment Analysis & Labeling
-
-File:
-
-```text
-scripts/analyze_sentiment.py
-```
-
-- Uses VADER to compute sentiment scores and labels:
-  - Positive, Negative, Neutral
-- Processes translated reviews from Task-1
-
-### 2. Thematic Extraction
-
-- Assigns each review to a theme based on keywords:
-  - Account Access / Login Issues → login, password, OTP
-  - Transaction Performance → transfer, slow, failed
-  - User Interface / UX → UI, design, layout
-  - Customer Support → support, help, service
-  - Feature Requests → fingerprint, notifications, new feature
-- Reviews can be assigned multiple themes or “Other” if no keywords match
-
-### ✔ 3. Sentiment & Theme Dataset
-
-Generated file:
-
-```text
-data/reviews_sentiment_themes.csv
-```
-
-Contains:
-
-- review_text (English)
-- rating
-- review_date
-- bank
-- source
-- sentiment_score
-- sentiment_label
-- theme
-
-Run the script:
-
-```bash
-python scripts/analyze_sentiment.py
-```
+4. **Full Report (Optional Additional Export)**  
+   A structured PDF or Markdown report can be generated including:  
+   - Executive summary  
+   - KPI tables  
+   - Trend charts  
+   - Per-bank insights  
+   - Recommendations  
+   - Appendices (methodology & code)  
+   If needed, run:  
+   ```bash
+   python generate_report.py
+   ```  
+   (Optional script — only if added.)
 
 ## Folder Structure
 
-```text
+```
 bank-reviews/
 ├── scrape/
 │   └── scrape_reviews.py
 ├── scripts/
 │   ├── preprocess.py
-│   └── analyze_sentiment.py
+│   ├── analyze_sentiment.py
+│   └── insights_and_viz.py
 ├── data/
 │   ├── reviews_raw.csv
 │   ├── reviews_clean_translated.csv
 │   └── reviews_sentiment_themes.csv
+├── outputs/
+│   ├── *.png
+│   ├── kpi_summary.csv
+│   └── bank_issues.json
 ├── README.md
 └── requirements.txt
 ```
 
-## How to Set Up
+## Apps Covered
 
-Install dependencies:
+- **CBE:** com.combanketh.mobilebanking
+- **Bank of Abyssinia:** com.boa.boaMobileBanking
+- **Dashen Bank:** com.dashen.dashensuperapp
 
+## Setup Instructions
+
+Install dependencies:  
 ```bash
 pip install -r requirements.txt
 ```
 
-Then run:
-
-1. Scraper → generates raw dataset
-2. Preprocessing with translation → generates reviews_clean_translated.csv
-3. Sentiment & theme analysis → generates reviews_sentiment_themes.csv
-
-## Apps Covered
-
-- Bank App ID: CBE - com.combanketh.mobilebanking
-- Bank of Abyssinia: com.boa.boaMobileBanking
-- Dashen Bank: com.dashen.dashensuperapp
+Run steps in order:  
+```bash
+python scrape/scrape_reviews.py
+python scripts/preprocess.py
+python scripts/analyze_sentiment.py
+python scripts/insights_and_viz.py
+```
